@@ -45,9 +45,6 @@ Forge source installation
 MinecraftForge ships with this code and installs it as part of the forge
 installation process, no further action is required on your part.
 
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
 
 For more details update more often refer to the Forge Forums:
 http://www.minecraftforge.net/forum/index.php/topic,14048.0.html

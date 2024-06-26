@@ -1,9 +1,9 @@
 package com.mrxdata.util;
 
 public class Reference {
-    public static final String MODID = "AltroAdditions";
-    public static final String VERSION = "0.0.1";
-    public static final String NAME = "DREO";
+    public static final String MODID = "altroadditions";
+    public static final String VERSION = "0.0.1-ALPHA";
+    public static final String NAME = "AltroAdditions";
     public static final String URL = "https://ob1lab.xyz";
     public static final String AUTHOR = "mrxdata";
     public static final String COPYRIGHT = "mrxdata";
