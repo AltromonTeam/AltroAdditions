@@ -1,11 +1,11 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "altroadditions:blocks/autofusion_core_bottom",
-    "up": "altroadditions:blocks/autofusion_core_top",
-    "north": "altroadditions:blocks/autofusion_core_front",
-    "south": "altroadditions:blocks/autofusion_core_back",
-    "west": "altroadditions:blocks/autofusion_core_left",
-    "east": "altroadditions:blocks/autofusion_core_right"
+    "down": "altroadditions:blocks/auto_fusion_core_bottom",
+    "up": "altroadditions:blocks/auto_fusion_core_top_off",
+    "north": "altroadditions:blocks/auto_fusion_core_side_off",
+    "south": "altroadditions:blocks/auto_fusion_core_side_off",
+    "west": "altroadditions:blocks/auto_fusion_core_side_off",
+    "east": "altroadditions:blocks/auto_fusion_core_side_off"
   }
 }

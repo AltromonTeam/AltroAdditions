@@ -1,6 +1,7 @@
 package com.mrxdata.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumRarity;
@@ -13,6 +14,16 @@ public abstract class BlockCore extends Block {
 
     protected String modName;
     protected String name;
+
+    public BlockCore(String name, Material material, float hardness, float resistanse, SoundType soundType) {
+
+        super(material);
+        this.setRegistryName(name);
+        this.setUnlocalizedName(name);
+        this.setHardness(hardness);
+        this.setResistance(resistanse);
+        this.setSoundType(soundType);
+    }
 
     public BlockCore(Material material, String modName) {
         super(material);

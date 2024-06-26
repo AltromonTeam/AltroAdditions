@@ -15,7 +15,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.1-ALPHA'
+version = modVersion
 group = 'com.mrxdata' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'altroadditions'
 
@@ -59,12 +59,39 @@ minecraft {
     }
 }
 
+repositories {
+    maven {
+        name 'progwml6'
+        url 'https://dvs1.progwml6.com/files/maven'
+        content {
+            includeGroup 'mezz.jei'
+        }
+        maven {
+            name = "ModMaven"
+            url = "modmaven.k-4u.nl"
+        }
+    }
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
-
+//    compileOnly "mezz.jei:jei_1.12.2:4.15.0.272:api"
+//    runtimeOnly "mezz.jei:jei_1.12.2:4.15.0.272"
+//    implementation fg.deobf("curse.maven:jei-238222:5101347")
+//    compileOnly "curse.maven:jei-238222:5101347"
+//    runtimeOnly "curse.maven:jei-238222:5101347"
+    runtimeOnly fileTree('lib')
+    compileOnly fileTree('lib')
+    compileOnly fileTree('libs')
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"

@@ -4,6 +4,7 @@ import com.mrxdata.proxy.CommonProxy;
 import com.mrxdata.registry.RegisterBlocks;
 import com.mrxdata.registry.RegisterItems;
 import com.mrxdata.util.Reference;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -13,10 +14,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.relauncher.Side;
@@ -25,26 +22,29 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class AltroCore {
 
+    public static void logMessage(String message) {
+        Minecraft mc = Minecraft.getMinecraft();
+        mc.player.sendChatMessage(message);
+    }
+
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        // Предварительная инициализация
         MinecraftForge.EVENT_BUS.register(RegisterBlocks.class);
         MinecraftForge.EVENT_BUS.register(RegisterItems.class);
         init();
+        proxy.preInit();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        // Основная инициализация
         proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        // Пост-инициализация
     }
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
