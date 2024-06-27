@@ -1,1 +1,1 @@
-AltroAdditions mod for 1.12.2
+AltroAdditions mod for Minecraft Forge 1.12.2

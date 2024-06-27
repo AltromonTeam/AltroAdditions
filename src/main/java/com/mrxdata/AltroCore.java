@@ -21,12 +21,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class AltroCore {
-
-    public static void logMessage(String message) {
-        Minecraft mc = Minecraft.getMinecraft();
-        mc.player.sendChatMessage(message);
-    }
-
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
     public static CommonProxy proxy;
 
@@ -68,5 +62,8 @@ public class AltroCore {
         };
 
     }
-
+    public static void logMessage(String message) {
+        Minecraft mc = Minecraft.getMinecraft();
+        mc.player.sendChatMessage(message);
+    }
 }

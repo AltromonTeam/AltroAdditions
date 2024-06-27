@@ -1,5 +1,6 @@
 {
   "variants": {
-    "normal": [{ "model": "altroadditions:auto_fusion_core" }]
+    "connected=true": { "model": "altroadditions:auto_fusion_core" },
+    "connected=false": { "model": "altroadditions:auto_fusion_core_off" }
   }
 }

@@ -1,6 +1,5 @@
 package com.mrxdata.proxy;
 
-import com.mrxdata.AltroCore;
 import com.mrxdata.tiles.TileEntityAutoFusionCore;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;

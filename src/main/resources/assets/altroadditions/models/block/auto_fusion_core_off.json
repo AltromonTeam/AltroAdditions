@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "altroadditions:blocks/auto_fusion_core_bottom",
+    "up": "altroadditions:blocks/auto_fusion_core_top_off",
+    "north": "altroadditions:blocks/auto_fusion_core_side_off",
+    "south": "altroadditions:blocks/auto_fusion_core_side_off",
+    "west": "altroadditions:blocks/auto_fusion_core_side_off",
+    "east": "altroadditions:blocks/auto_fusion_core_side_off"
+  }
+}
